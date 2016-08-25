@@ -178,10 +178,12 @@
 					return d.promise;
 				},
 				put: function(datas) {
+					var s = this;
 					angular.forEach(datas, function(value) {
 						s.uSinaEmotionsHt.put(value.title, value.url);
 					})
 
+				},
 				uSinaEmotionsHt: new Hashtable(),
 				AnalyticEmotion: function(s) {
 					if (typeof(s) != "undefined") {
