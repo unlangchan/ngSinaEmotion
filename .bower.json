@@ -1,0 +1,22 @@
+{
+  "name": "ngSinaEmotion",
+  "description": "for sinaEmotion by angular plugin ",
+  "homepage": "https://github.com/unlangchan/ngSinaEmotion/",
+  "main": [
+    "ngSinaEmotion.js",
+    "ngSinaEmotion.css"
+  ],
+  "dependencies": {
+    "jquery": ">= 2.0.0",
+    "angular": ">1.5.0"
+  },
+  "_release": "4fe723442b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4fe723442b363b1886b13cad823962383759979e"
+  },
+  "_source": "https://github.com/unlangchan/ngSinaEmotion.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/unlangchan/ngSinaEmotion.git"
+}
