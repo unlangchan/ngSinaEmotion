@@ -172,20 +172,16 @@
 								});
 								s.uSinaEmotionsHt.put(data[i].phrase, data[i].icon);
 							}
-							s.uSinaEmotionsHt.put('[pt顶一个]', '/source/face/ct/1.png');
-							s.uSinaEmotionsHt.put('[pt赞一个]', '/source/face/ct/2.png');
-							s.uSinaEmotionsHt.put('[pt掌声]', '/source/face/ct/3.png');
-							s.uSinaEmotionsHt.put('[pt鲜花]', '/source/face/ct/4.png');
-							s.uSinaEmotionsHt.put('[pt看多]', '/source/face/ct/5.png');
-							s.uSinaEmotionsHt.put('[pt看空]', '/source/face/ct/6.png');
-							s.uSinaEmotionsHt.put('[pt震荡]', '/source/face/ct/7.png');
-							console.log(s.emotions);
 							d.resolve();
 						}
 					});
-					console.log(this);
 					return d.promise;
 				},
+				put: function(datas) {
+					angular.forEach(datas, function(value) {
+						s.uSinaEmotionsHt.put(value.title, value.url);
+					})
+
 				uSinaEmotionsHt: new Hashtable(),
 				AnalyticEmotion: function(s) {
 					if (typeof(s) != "undefined") {
