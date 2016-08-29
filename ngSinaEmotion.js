@@ -17,24 +17,14 @@
 					link: function(scope, element, attrs, ngModel) {
 						$(element[0]).on("click", function(event) {
 							event.stopPropagation();
-							var eTop = scope.options.top || ($(this).offset().top - $(this).height() - 220);
-							var eLeft = scope.options.left || $(this).offset().left;
-							var eWidth = scope.options.width || $(this).width();
+							var options = scope.options || {};
 							if ($('#emotions .categorys')[0]) {
-								$('#emotions').css({
-									top: eTop,
-									left: eLeft,
-									width: eWidth
-								});
+								$('#emotions').css(options);
 								$('#emotions').toggle();
 								return;
 							}
 							$('body').append('<div id="emotions"></div>');
-							$('#emotions').css({
-								top: eTop,
-								left: eLeft,
-								width: eWidth
-							});
+							$('#emotions').css(options);
 							$('#emotions').html('<div>正在加载，请稍候...</div>');
 							$('#emotions').on('click', function(event) {
 								event.stopPropagation();
